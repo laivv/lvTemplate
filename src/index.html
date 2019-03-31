@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>lvTemplate</title>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script type="text/template" id="template">
+    <ul>
+      <% 
+        for (var i = 0 ; i < data.length ; i++) { 
+        var item = data[i]; 
+      %>
+        <li style="background:<%= i % 2 === 0 ? 'red' : 'green' %>;padding:20px">
+            <%= i %> <%= item.name %>
+        </li>
+      <% } %>
+    </ul>
+  </script>
+
+  <script src="render.js"></script>
+  <script>
+
+    var option = {
+      data: [{ name: 'item1' }, { name: 'item2' }, { name: 'item3' }]
+    }
+    var template = document.getElementById('template').innerHTML
+    var html = render(template, option)
+    document.getElementById('app').innerHTML = html
+
+
+  </script>
+</body>
+
+</html>
