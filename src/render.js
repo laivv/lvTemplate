@@ -58,5 +58,4 @@ var render = function () {
       return cb
     }
   }
-
 }()

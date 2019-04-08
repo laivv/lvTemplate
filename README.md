@@ -1,6 +1,6 @@
-# lingluo-render
-一个简单的js模板引擎
-## useage
+# render.js
+一个简单的javascript模板引擎
+## usage
 模板：
 ```html
 <script type="text/template" id="template">  
