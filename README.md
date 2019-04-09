@@ -1,7 +1,6 @@
-# render.js
-一个简单的javascript模板引擎
+# template.js
+一个简单的Javascript模板引擎
 ## usage
-模板：
 ```html
 <script type="text/template" id="template">  
  <ul>
